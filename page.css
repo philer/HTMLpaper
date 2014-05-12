@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/**
+ * Provids a basic printable pages layout.
+ * @see README.md
+ * 
+ * @author Philipp Miller
+ * @url https://github.com/philer/HTMLpaper
+ * 
+ */
+
+/**************
+ *** Basics ***
+ **************/
+
+/* Turn of scrolling for authentic preview */
+* {
+  overflow: visible;
+}
+
+/* basic formatting */
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  font-size: 11pt;
+  font-family: serif;
+}
+
+/* turn of print margins, see .page-inner */
+@page {
+  margin: 0;
+  padding: 0;
+}
+
+/* make sure only contents of .page get's printed */
+@media print {
+  
+  .page {
+    overflow: hidden;
+  }
+  
+}
+
+/* in-browser preview with a nice background */
+@media screen {
+  
+  body {
+    padding: 20px;
+    background-color: #222;
+  }
+  .page {
+    margin: 1em;
+    box-shadow: .75mm .75mm 3mm rgba(0,0,0,.35),
+                .33mm .33mm 1.5mm rgba(0,0,0,.2);
+  }
+  .page-inner {
+    /*box-shadow: inset 0 0 10px #eee,*/
+                /*inset 0 0 1px #ccc;*/
+  }
+}
+
+/* basic page formatting */
+.page {
+  width: 210mm;
+  height: 297mm;
+  /* width: 793.7007874015749px;   /* (210/25.4)*96 */
+  /* height: 1122.5196850393702px; /* (297/25.4)*96 */
+    
+  color: black;
+  background-color: white;
+  
+  /* This fixes printing in firefox, for some reason */
+  display: inline-block;
+  position: relative;
+}
+
+/* page content */
+.page-inner {
+  position: absolute;
+  
+  /*********************
+   *** PRINT MARGINS ***
+   *********************
+   Make adjustments here.
+   You can use padding as well.
+   */
+  top: 3.5cm;
+  left: 4cm;
+  right: 4cm;
+  bottom: 3.5cm;
+  
+  text-align: left;
+}
+
+/**
+ * In case you want those.
+ * If you use LaTeX's pdfpages package,
+ * you have that handle page numbers instead.
+ */
+.page-number {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+
+
+/*********************
+ *** Paper Formats ***
+ *********************/
+
+/*** DIN/ISO formats ***/
+
+/* default, see .page */
+.A4page, .A4pages .page { width: 210mm; height: 297mm; }
+
+/* small A* formats */
+.A5page, .A5pages .page { width: 148mm; height: 210mm; }
+.A6page, .A6pages .page { width: 105mm; height: 148mm; }
+.A7page, .A7pages .page { width:  74mm; height: 105mm; }
+
+/* large A* formats */
+.A0page, .A0pages .page { width: 841mm; height: 1189mm; }
+.A1page, .A1pages .page { width: 594mm; height:  841mm; }
+.A2page, .A2pages .page { width: 420mm; height:  594mm; }
+.A3page, .A3pages .page { width: 297mm; height:  420mm; }
+
+/* B* formats */
+.B0page, .B0pages .page { width: 1000mm; height: 1414mm; }
+.B1page, .B1pages .page { width:  707mm; height: 1000mm; }
+.B2page, .B2pages .page { width:  500mm; height:  707mm; }
+.B3page, .B3pages .page { width:  353mm; height:  500mm; }
+.B4page, .B4pages .page { width:  250mm; height:  353mm; }
+.B5page, .B5pages .page { width:  176mm; height:  250mm; }
+.B6page, .B6pages .page { width:  125mm; height:  176mm; }
+.B7page, .B7pages .page { width:   88mm; height:  125mm; }
+
+
+/* "The U.S., Canada and Mexico use a different system of paper sizes compared to the rest of the world." (https://en.wikipedia.org/wiki/Paper_size) */
+.letter-page,     .letter-pages .page     { width: 8.5in; height: 11.0in; }
+.gov-letter-page, .gov-letter-pages .page { width: 8.0in; height: 10.5in; }
+.legal-page,      .legal-pages .page      { width: 8.5in; height: 14.0in; }
+.ledger-page,     .ledger-pages .page     { width:  17in; height:   11in; }
+.tabloid-page,    .tabloid-pages .page    { width:  11in; height:   17in; }

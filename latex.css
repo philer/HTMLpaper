@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+ * Provids a basic LaTeX style for HTML text.
+ * @see README.md
+ * 
+ * @author Philipp Miller
+ * @url https://github.com/philer/HTMLpaper
+ * 
+ */
+
+@import "font/cmun-serif.css";
+@import "font/cmun-typewriter.css";
+
+.latex {
+  font-family: "Computer Modern Serif";
+  font-size: 11pt;
+  line-height: 1.3em;
+}
+
+.latex * {
+  text-overflow: ellipsis;
+}
+
+/* LaTeX indents all paragraphs except the first one */
+.latex p {
+  margin: 1em 0;
+  text-indent: 1.5em;
+}
+.latex p.no-indent,
+.latex p:first-child,
+.latex p:first-of-type,
+.latex h1 + p,
+.latex h2 + p,
+.latex h3 + p,
+.latex h4 + p,
+.latex h5 + p,
+.latex h6 + p {
+  text-indent: 0;
+}
+.latex h1,
+.latex h2,
+.latex h3,
+.latex h4,
+.latex h5,
+.latex h5 {
+  margin: 1em 0;
+}
+
+.latex h1 {
+  font-size: 2em;
+}
+.latex h2 {
+  font-size: 1.5em;
+}
+.latex h3 {
+  font-size: 1.2em;
+}
+
+.latex section :first-child {
+  margin-top: 0;
+}
+
+.latex code,
+.latex pre,
+.latex .code {
+  font-family: "Computer Modern Typewriter";
+}
