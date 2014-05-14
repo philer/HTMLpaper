@@ -10,7 +10,7 @@ that let's you create pages that will look like and
 seemlessly integrate into LaTeX documents. See LaTeX's `pdfpages` package.
 This is mostly possible due to TeX's *Computer Modern* Font
 being available as a webfont. See [Using Computer Modern on the web](http://checkmyworking.com/cm-web-fonts/).
-
+You may also want to include [MathJax](http://www.mathjax.org) for displaying mathematical formula.
 
 ### Requirements
 * I assume you know your way around HTML and CSS. Otherwise you should probably find another (easier) way to do whatever it is you are trying to do.
