@@ -8,11 +8,30 @@
  * 
  */
 
-@import "font/cmun-serif.css";
-@import "font/cmun-typewriter.css";
+
+/**
+ * Computer Modern was the original LaTeX font created by Donald Knuth
+ * If you want to use Computer Modern uncomment the following lines and add
+ * "Computer Modern Serif" as a font-family to .latex.
+ * 
+ * @see https://en.wikipedia.org/?title=Computer_Modern
+ * @see http://checkmyworking.com/cm-web-fonts/
+ */
+/*@import "fonts/computer_modern/cmun-serif.css";*/
+/*@import "fonts/computer_modern/cmun-typewriter.css";*/
+
+/**
+ * Latin Modern is the natural successor to Computer Modern and is used
+ * in most LaTeX distributions today.
+ * 
+ * @see http://www.gust.org.pl/projects/e-foundry/latin-modern/index_html
+ * @see https://en.wikipedia.org/?title=Computer_Modern#Latin_Modern
+ */
+@import "fonts/latin_modern/lmodern.css";
+
 
 .latex {
-  font-family: "Computer Modern Serif";
+  font-family: "Latin Modern Roman", "Latin Modern Roman Webfont";
   font-size: 11pt;
   line-height: 1.3em;
 }
@@ -34,7 +53,8 @@
 .latex h3 + p,
 .latex h4 + p,
 .latex h5 + p,
-.latex h6 + p {
+.latex h6 + p
+{
   text-indent: 0;
 }
 .latex h1,
@@ -42,7 +62,8 @@
 .latex h3,
 .latex h4,
 .latex h5,
-.latex h5 {
+.latex h6
+{
   margin: 1em 0;
 }
 
@@ -62,6 +83,7 @@
 
 .latex code,
 .latex pre,
-.latex .code {
-  font-family: "Computer Modern Typewriter";
+.latex .code
+{
+  font-family: "Latin Modern Mono", "Latin Modern Mono Webfont";
 }

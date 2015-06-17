@@ -1,0 +1,45 @@
+/*** ROMAN **/
+
+@font-face {
+    font-family: "Latin Modern Roman Webfont";
+    src: url("lmroman10-regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Webfont";
+    src: url("lmroman10-bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Webfont";
+    src: url("lmroman10-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Webfont";
+    src: url("lmroman10-bolditalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*** MONO ***/
+
+@font-face {
+    font-family: "Latin Modern Mono Webfont";
+    src: url("lmmono10-regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Latin Modern Mono Webfont";
+    src: url("lmmono10-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}

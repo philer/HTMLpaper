@@ -8,8 +8,8 @@ You can create complex layouts using CSS without worrying about them getting bot
 Additionally, there is a very basic LaTeX style formatting option
 that let's you create pages that will look like and
 seemlessly integrate into LaTeX documents. See LaTeX's `pdfpages` package.
-This is mostly possible due to TeX's *Computer Modern* Font
-being available as a webfont. See [Using Computer Modern on the web](http://checkmyworking.com/cm-web-fonts/).
+
+Font files for LaTeX's Latin Modern as well as the original Computer Modern are included. The css will default to a system installed version of Latin Modern and fallback to the included Latin Modern webfont.
 You may also want to include [MathJax](http://www.mathjax.org) for displaying mathematical formula.
 
 ### Requirements
@@ -49,6 +49,6 @@ Consider the following scenarios
 
 ### Terms
 * This Software is provided as is, yada yada. I don't take any responsibility for things you manage to break or waste by using this. If you print out a thousand pages and then notice something is slightly off, that's on you.
-* You may use and modify this however you want. It's free as in *free software* and free as in *free of charge*.
 * Don't distribute it claiming you created it yourself.
-* If you create something cool with this, show me, so I can feel warm and fuzzy inside.
+* If you create something cool with this, you may show it to me, so I can feel warm and fuzzy inside.
+* License is MIT, see included LICENSE file.
